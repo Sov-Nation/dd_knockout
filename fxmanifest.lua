@@ -2,7 +2,7 @@ fx_version 'adamant'
 
 game 'gta5'
 
-description "DokaDoka's"
+description "DokaDoka's Knockout"
 
 server_scripts {
 	'server/main.lua'
