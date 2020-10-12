@@ -1,4 +1,2 @@
-# fxserver-esx_boilerplate
-FXServer ESX Boilerplate
-
-This a sample script for es_extended
+# dd_knockout
+knockout script built on the foundations of player knockout
