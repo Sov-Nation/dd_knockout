@@ -1,5 +1,5 @@
 Config = {
-	Unarmed = = 0.2,
+	Unarmed = 0.2,
 	Flashlight = 0.3,
 	BrassKnuckles = 0.3,
 	Hatchet = 0.5,
@@ -17,3 +17,5 @@ Config = {
 	Golfclub = 0.3,
 	Crowbar = 0.3
 }
+
+Config.DefaultTime = 30 --In seconds
