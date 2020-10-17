@@ -1,7 +1,7 @@
 ESX              	= nil
 local PlayerData 	= {}
 local knockedOut 	= false
-local wait 			= 30
+local wait 			= 0
 local lowHealth 	= false
 
 Citizen.CreateThread(function()
@@ -57,12 +57,13 @@ Citizen.CreateThread(function()
 		local myPed = PlayerPedId()
 
 		if GetEntityHealth(myPed) < 125 then
-			wait = 30
+			wait = Config.DefaultTime
 			knockedOut = true
 			lowHealth = true
 		elseif GetEntityHealth(myPed) > 125 then
 			lowHealth = false
 		end
+
 		if knockedOut then
 			DisableAllControlActions(0)
 			EnableControlAction(0, 1, true) -- Pan
@@ -94,6 +95,9 @@ Citizen.CreateThread(function()
 end)
 
 function unko(t)
+	if t == nil then
+		t = 0
+	end
 	if knockedOut then
 		Wait(t*1000)
 		knockedOut = false
@@ -108,14 +112,11 @@ end
 
 RegisterNetEvent('knockout:unko')
 AddEventHandler('knockout:unko', function(t)
-	if t == nil then
-		t = 0
-	end
 	unko(t)
 end)
 
 RegisterNetEvent('knockout:ko')
 AddEventHandler('knockout:ko', function()
-	wait = 30
+	wait = Config.DefaultTime
 	knockedOut = true
 end)

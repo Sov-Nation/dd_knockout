@@ -17,3 +17,5 @@ Config = {
 	Golfclub = 0.3,
 	Crowbar = 0.3
 }
+
+Config.DefaultTime = 30 --In seconds
