@@ -1,5 +1,5 @@
 Config = {
-	Unarmed = = 0.2,
+	Unarmed = 0.2,
 	Flashlight = 0.3,
 	BrassKnuckles = 0.3,
 	Hatchet = 0.5,
